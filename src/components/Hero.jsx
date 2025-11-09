@@ -5,7 +5,8 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-[80vh] md:h-[90vh] w-full overflow-hidden bg-gradient-to-b from-slate-900 via-black to-black text-white">
       <div className="absolute inset-0">
-        <Spline scene="https://prod.spline.design/VJLoxp84lCdVfdZu/scene.splinecode" style={{ width: '100%', height: '100%' }} />
+        {/* Updated Spline animation: vibrant blue/purple cube grid */}
+        <Spline scene="https://prod.spline.design/UngO8SNLfLcyPG7O/scene.splinecode" style={{ width: '100%', height: '100%' }} />
         <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-black/40 to-black" />
       </div>
 
@@ -46,6 +47,18 @@ export default function Hero() {
         >
           <a href="#projects" className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-medium text-white shadow hover:bg-indigo-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400">View Projects</a>
           <a href="#contact" className="inline-flex items-center justify-center rounded-md border border-white/10 bg-white/5 px-5 py-2.5 text-sm font-medium text-white/90 hover:bg-white/10">Contact Me</a>
+        </motion.div>
+
+        {/* Subtle scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 0.8 }}
+          transition={{ delay: 0.8 }}
+          className="pointer-events-none absolute bottom-6 left-1/2 -translate-x-1/2"
+        >
+          <div className="h-10 w-6 rounded-full border border-white/20">
+            <div className="mx-auto mt-1 h-2 w-1.5 animate-bounce rounded bg-white/60" />
+          </div>
         </motion.div>
       </div>
     </section>
